@@ -10,7 +10,7 @@ campsiteRouter.route('/')
         res.setHeader('Content-Type', 'application/json');
         res.json(campsites);
     })
-    .catch(err => next(err));
+    .catch(err => next(err));   
 })
 .post((req, res, next) => {
     Campsite.create(req.body)
